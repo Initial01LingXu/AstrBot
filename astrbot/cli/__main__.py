@@ -4,8 +4,8 @@ import sys
 
 import click
 
-from . import __version__
-from .commands import conf, init, password, plug, run
+from astrbot.cli import __version__
+from astrbot.cli.commands import conf, init, password, plug, run
 
 logo_tmpl = r"""
      ___           _______.___________..______      .______     ______   .___________.
