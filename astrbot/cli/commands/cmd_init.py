@@ -66,5 +66,8 @@ def init() -> None:
             "Cannot acquire lock file. Please check if another instance is running"
         )
 
+    except click.Abort:
+        raise click.ClickException("User aborted")
+
     except Exception as e:
         raise click.ClickException(f"Initialization failed: {e!s}")
